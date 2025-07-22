@@ -32,9 +32,9 @@ def main():
         conn, c = initialize_database()
         sample_transactions = [
             ('Salary', 1500.0, '2025-07-22'),
-            ('Groceries', -75.0, '2025-07-22'),
-            ('Utilities', -100.0, '2025-07-22'),
-            ('Rent', -800.0, '2025-07-22')
+            ('Groceries', 75.0, '2025-07-22'),
+            ('Utilities', 100.0, '2025-07-22'),
+            ('Rent', 800.0, '2025-07-22')
         ]
         for transaction in sample_transactions:
             add_transaction(*transaction, conn, c)
