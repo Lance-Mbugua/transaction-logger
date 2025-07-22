@@ -1,17 +1,23 @@
-Transaction Logger Test PlanProject: Transaction Logger CLI Tool
+Project: Transaction Logger CLI Tool
 Date: July 22, 2025
-Author: John DoeBlack-Box Testing
+Author: Lance M
 
-Objective: Validate functionality without knowledge of internal code.
-Test Cases:TC1: Run script with sample data.
-Expected: Logs 4 transactions and displays summary (e.g., Salary: $1500.00, Groceries: $-75.00).
-TC2: Attempt to add transaction with invalid amount (0 or negative).
-Expected: Raises ValueError with message "Invalid category or amount".
-TC3: Attempt to add transaction with empty category.
-Expected: Raises ValueError with message "Invalid category or amount".
+Black-Box Testing
+Objective: Validate functionality without access to internal code.
 
-Results: All test cases passed, ensuring accurate transaction logging and summarization.White-Box Testing
+Test Cases:
 
-Objective: Validate internal logic (not implemented in CLI script due to simplicity).
-Note: Focused on black-box testing for output validation, as script is straightforward.
+TC1: Run script with sample data
+Expected: Logs 4 transactions and shows summary (e.g., Salary: $1500.00, Groceries: $75.00)
 
+TC2: Add transaction with invalid amount (0)
+Expected: Raises ValueError: "Invalid category or amount"
+
+TC3: Add transaction with empty category
+Expected: Raises ValueError: "Invalid category or amount"
+
+Results: ✅ All test cases passed, ensuring accurate logging and summarization.
+
+White-Box Testing
+Objective: Validate internal logic (not implemented due to CLI simplicity).
+Note: Focused on black-box testing for output validation.
